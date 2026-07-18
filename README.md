@@ -18,17 +18,17 @@ vs. 59.9% mIoU for the pixel-wise KNN baseline (k=3).
 ├── challenge.py            # Main pipeline: tuning, training, ensembling, inference
 ├── util.py                 # Dataset I/O, model implementations, evaluation, visualization
 ├── eval_unet_scribbles.py  # Standalone Tiny U-Net evaluation with TTA + threshold search
-├── report/
-│   ├── main.tex
-│   ├── main.pdf
-│   └── figures/
 └── dataset/
     ├── train/
     │   ├── images/
     │   ├── scribbles/
     │   ├── ground_truth/
     │   └── predictions/    # created by challenge.py
-    └── test/
+    └── test1/
+    |   ├── images/
+    |   ├── scribbles/
+    |   └── predictions/    # created by challenge.py
+    |__ test2/
         ├── images/
         ├── scribbles/
         └── predictions/    # created by challenge.py
