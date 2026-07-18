@@ -1,0 +1,133 @@
+{"trial": 1, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 250, "add_dist": false, "prob_thr": 0.5, "bilateral_params": null, "tta": "none"}, "cv_score": 0.5846205190755659}
+{"trial": 2, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 450, "add_dist": true, "prob_thr": 0.55, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.6171557901317873}
+{"trial": 3, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 450, "add_dist": false, "prob_thr": 0.55, "bilateral_params": [5, 0.05, 2.0], "tta": "none"}, "cv_score": 0.5919748363178753}
+{"trial": 4, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 150, "add_dist": true, "prob_thr": 0.55, "bilateral_params": [5, 0.05, 2.0], "tta": "none"}, "cv_score": 0.6162107646920824}
+{"trial": 5, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 350, "add_dist": false, "prob_thr": 0.5, "bilateral_params": null, "tta": "none"}, "cv_score": 0.5830560469102212}
+{"trial": 6, "cfg": {"family": "knn", "k": 1, "add_dist": false, "prob_thr": 0.5, "bilateral_params": [7, 0.08, 3.0], "tta": "hflip"}, "cv_score": 0.5574849421223868}
+{"trial": 7, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 450, "add_dist": false, "prob_thr": 0.5, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.5691668332809152}
+{"trial": 9, "cfg": {"family": "knn", "k": 3, "add_dist": true, "prob_thr": 0.6, "bilateral_params": [7, 0.08, 3.0], "tta": "hflip"}, "cv_score": 0.4972740412962664}
+{"trial": 10, "cfg": {"family": "knn", "k": 5, "add_dist": false, "prob_thr": 0.6, "bilateral_params": [7, 0.08, 3.0], "tta": "none"}, "cv_score": 0.5783083578143617}
+{"trial": 11, "cfg": {"family": "knn", "k": 9, "add_dist": true, "prob_thr": 0.55, "bilateral_params": null, "tta": "none"}, "cv_score": 0.504900185568263}
+{"trial": 12, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 250, "add_dist": true, "prob_thr": 0.5, "bilateral_params": null, "tta": "hflip"}, "cv_score": 0.4689488702817009}
+{"trial": 13, "cfg": {"family": "knn", "k": 7, "add_dist": true, "prob_thr": 0.5, "bilateral_params": null, "tta": "none"}, "cv_score": 0.5024692751647323}
+{"trial": 14, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 250, "add_dist": false, "prob_thr": 0.55, "bilateral_params": [5, 0.05, 2.0], "tta": "none"}, "cv_score": 0.5920438446728014}
+{"trial": 15, "cfg": {"family": "knn", "k": 1, "add_dist": true, "prob_thr": 0.5, "bilateral_params": [7, 0.08, 3.0], "tta": "none"}, "cv_score": 0.49171065899628874}
+{"trial": 16, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 150, "add_dist": true, "prob_thr": 0.5, "bilateral_params": [5, 0.05, 2.0], "tta": "none"}, "cv_score": 0.5270008628018915}
+{"trial": 17, "cfg": {"family": "knn", "k": 9, "add_dist": false, "prob_thr": 0.55, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.5757210391084772}
+{"trial": 18, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 450, "add_dist": false, "prob_thr": 0.55, "bilateral_params": [5, 0.05, 2.0], "tta": "none"}, "cv_score": 0.5909427728940932}
+{"trial": 19, "cfg": {"family": "knn", "k": 3, "add_dist": true, "prob_thr": 0.55, "bilateral_params": [7, 0.08, 3.0], "tta": "hflip"}, "cv_score": 0.49733726461373157}
+{"trial": 20, "cfg": {"family": "knn", "k": 5, "add_dist": true, "prob_thr": 0.5, "bilateral_params": [5, 0.05, 2.0], "tta": "none"}, "cv_score": 0.5003652729634992}
+{"trial": 21, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 250, "add_dist": true, "prob_thr": 0.55, "bilateral_params": [5, 0.05, 2.0], "tta": "none"}, "cv_score": 0.5769220333912892}
+{"trial": 22, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 250, "add_dist": false, "prob_thr": 0.5, "bilateral_params": [5, 0.05, 2.0], "tta": "none"}, "cv_score": 0.5833547219649523}
+{"trial": 23, "cfg": {"family": "knn", "k": 7, "add_dist": false, "prob_thr": 0.6, "bilateral_params": [7, 0.08, 3.0], "tta": "hflip"}, "cv_score": 0.5792920268319056}
+{"trial": 24, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 150, "add_dist": false, "prob_thr": 0.55, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.5746874294868544}
+{"trial": 25, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 150, "add_dist": false, "prob_thr": 0.55, "bilateral_params": null, "tta": "hflip"}, "cv_score": 0.5768651920116873}
+{"trial": 26, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 150, "add_dist": true, "prob_thr": 0.55, "bilateral_params": null, "tta": "hflip"}, "cv_score": 0.5302300734513344}
+{"trial": 27, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 250, "add_dist": false, "prob_thr": 0.5, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.5665819462527099}
+{"trial": 29, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 150, "add_dist": true, "prob_thr": 0.55, "bilateral_params": null, "tta": "hflip"}, "cv_score": 0.608821065197248}
+{"trial": 30, "cfg": {"family": "knn", "k": 9, "add_dist": true, "prob_thr": 0.5, "bilateral_params": null, "tta": "none"}, "cv_score": 0.5040817447846373}
+{"trial": 1, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 250, "add_dist": false, "prob_thr": 0.5, "bilateral_params": null, "tta": "none"}, "cv_score": 0.5846205190755659}
+{"trial": 2, "cfg": {"family": "rw", "beta": 150.0, "rw_mode": "cg", "prob_thr": 0.55, "tta": "hflip"}, "cv_score": 0.45212072517055457}
+{"trial": 4, "cfg": {"family": "rw", "beta": 150.0, "rw_mode": "bf", "prob_thr": 0.5, "tta": "hflip"}, "cv_score": 0.4321062567313419}
+{"trial": 5, "cfg": {"family": "knn", "k": 7, "add_dist": true, "prob_thr": 0.6, "bilateral_params": null, "tta": "none"}, "cv_score": 0.5057164998360867}
+{"trial": 6, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 150, "add_dist": false, "prob_thr": 0.5, "bilateral_params": null, "tta": "none"}, "cv_score": 0.5843056357193319}
+{"trial": 7, "cfg": {"family": "knn", "k": 1, "add_dist": false, "prob_thr": 0.6, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.5585116761835593}
+{"trial": 8, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 250, "add_dist": false, "prob_thr": 0.55, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.6097860413929723}
+{"trial": 9, "cfg": {"family": "rw", "beta": 180.0, "rw_mode": "cg", "prob_thr": 0.55, "tta": "hflip"}, "cv_score": 0.45212072517055457}
+{"trial": 10, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 150, "add_dist": true, "prob_thr": 0.55, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.6225073934987918}
+{"trial": 11, "cfg": {"family": "knn", "k": 5, "add_dist": false, "prob_thr": 0.6, "bilateral_params": [7, 0.08, 3.0], "tta": "none"}, "cv_score": 0.5783083578143617}
+{"trial": 12, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 350, "add_dist": true, "prob_thr": 0.5, "bilateral_params": null, "tta": "hflip"}, "cv_score": 0.5691023802858367}
+{"trial": 13, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 450, "add_dist": false, "prob_thr": 0.5, "bilateral_params": [5, 0.05, 2.0], "tta": "none"}, "cv_score": 0.5849534294871339}
+{"trial": 14, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 150, "add_dist": false, "prob_thr": 0.5, "bilateral_params": [5, 0.05, 2.0], "tta": "none"}, "cv_score": 0.5832926831842905}
+{"trial": 16, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 150, "add_dist": true, "prob_thr": 0.5, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.6044028475272141}
+{"trial": 17, "cfg": {"family": "knn", "k": 7, "add_dist": false, "prob_thr": 0.55, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.5748051413940076}
+{"trial": 18, "cfg": {"family": "knn", "k": 1, "add_dist": true, "prob_thr": 0.55, "bilateral_params": [7, 0.08, 3.0], "tta": "none"}, "cv_score": 0.49171065899628874}
+{"trial": 19, "cfg": {"family": "rw", "beta": 180.0, "rw_mode": "bf", "prob_thr": 0.55, "tta": "hflip"}, "cv_score": 0.45212072517055457}
+{"trial": 21, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 450, "add_dist": false, "prob_thr": 0.5, "bilateral_params": null, "tta": "none"}, "cv_score": 0.5831871673914079}
+{"trial": 22, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 450, "add_dist": true, "prob_thr": 0.55, "bilateral_params": null, "tta": "none"}, "cv_score": 0.5665880964209654}
+{"trial": 23, "cfg": {"family": "rw", "beta": 120.0, "rw_mode": "bf", "prob_thr": 0.5, "tta": "hflip"}, "cv_score": 0.4321062567313419}
+{"trial": 24, "cfg": {"family": "rw", "beta": 90.0, "rw_mode": "bf", "prob_thr": 0.5, "tta": "hflip"}, "cv_score": 0.4321062567313419}
+{"trial": 25, "cfg": {"family": "rw", "beta": 180.0, "rw_mode": "cg", "prob_thr": 0.5, "tta": "none"}, "cv_score": 0.4321848363789411}
+{"trial": 27, "cfg": {"family": "knn", "k": 1, "add_dist": true, "prob_thr": 0.5, "bilateral_params": [7, 0.08, 3.0], "tta": "hflip"}, "cv_score": 0.49171065899628874}
+{"trial": 28, "cfg": {"family": "knn", "k": 9, "add_dist": true, "prob_thr": 0.6, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.5081293830399979}
+{"trial": 29, "cfg": {"family": "rw", "beta": 90.0, "rw_mode": "bf", "prob_thr": 0.5, "tta": "none"}, "cv_score": 0.4321848363789411}
+{"trial": 30, "cfg": {"family": "rw", "beta": 90.0, "rw_mode": "cg", "prob_thr": 0.55, "tta": "none"}, "cv_score": 0.4522063701824515}
+{"trial": 31, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 250, "add_dist": false, "prob_thr": 0.55, "bilateral_params": [5, 0.05, 2.0], "tta": "none"}, "cv_score": 0.5920438446728014}
+{"trial": 34, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 450, "add_dist": false, "prob_thr": 0.5, "bilateral_params": null, "tta": "hflip"}, "cv_score": 0.6041145362501659}
+{"trial": 35, "cfg": {"family": "knn", "k": 7, "add_dist": false, "prob_thr": 0.5, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.570716315149301}
+{"trial": 36, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 450, "add_dist": false, "prob_thr": 0.5, "bilateral_params": null, "tta": "none"}, "cv_score": 0.5847891295669986}
+{"trial": 37, "cfg": {"family": "knn", "k": 9, "add_dist": false, "prob_thr": 0.5, "bilateral_params": [7, 0.08, 3.0], "tta": "none"}, "cv_score": 0.5715174628214843}
+{"trial": 38, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 350, "add_dist": true, "prob_thr": 0.55, "bilateral_params": null, "tta": "hflip"}, "cv_score": 0.6242224767750774}
+{"trial": 39, "cfg": {"family": "knn", "k": 5, "add_dist": false, "prob_thr": 0.55, "bilateral_params": [7, 0.08, 3.0], "tta": "hflip"}, "cv_score": 0.5733803252249077}
+{"trial": 40, "cfg": {"family": "gc", "gc_iters": 5, "prob_thr": 0.55, "tta": "none"}, "cv_score": 0.7427800815653883}
+{"trial": 41, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 350, "add_dist": false, "prob_thr": 0.55, "bilateral_params": [5, 0.05, 2.0], "tta": "none"}, "cv_score": 0.5906718785615043}
+{"trial": 42, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 450, "add_dist": true, "prob_thr": 0.5, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.5244505425710416}
+{"trial": 44, "cfg": {"family": "knn", "k": 3, "add_dist": true, "prob_thr": 0.55, "bilateral_params": null, "tta": "hflip"}, "cv_score": 0.4973541855681485}
+{"trial": 45, "cfg": {"family": "gc", "gc_iters": 8, "prob_thr": 0.55, "tta": "none"}, "cv_score": 0.7431930999949206}
+{"trial": 46, "cfg": {"family": "gc", "gc_iters": 5, "prob_thr": 0.5, "tta": "none"}, "cv_score": 0.7430346272124516}
+{"trial": 47, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 250, "add_dist": false, "prob_thr": 0.5, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.6026454843766437}
+{"trial": 48, "cfg": {"family": "knn", "k": 7, "add_dist": true, "prob_thr": 0.5, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.5024821706851618}
+{"trial": 49, "cfg": {"family": "gc", "gc_iters": 3, "prob_thr": 0.55, "tta": "hflip"}, "cv_score": 0.7469619351765499}
+{"trial": 1, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 250, "add_dist": false, "prob_thr": 0.5, "bilateral_params": null, "tta": "none"}, "cv_score": 0.5828721672704278}
+{"trial": 2, "cfg": {"family": "knn", "k": 7, "add_dist": true, "prob_thr": 0.55, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.5156746016830429}
+{"trial": 3, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 350, "add_dist": true, "prob_thr": 0.5, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.5052401749772101}
+{"trial": 4, "cfg": {"family": "knn", "k": 3, "add_dist": true, "prob_thr": 0.5, "bilateral_params": [7, 0.08, 3.0], "tta": "hflip"}, "cv_score": 0.5082654420383184}
+{"trial": 5, "cfg": {"family": "gc", "gc_iters": 3, "prob_thr": 0.55, "tta": "hflip"}, "cv_score": 0.735038252060449}
+{"trial": 6, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 250, "add_dist": false, "prob_thr": 0.5, "bilateral_params": null, "tta": "none"}, "cv_score": 0.5846205190755658}
+{"trial": 8, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 350, "add_dist": true, "prob_thr": 0.5, "bilateral_params": null, "tta": "hflip"}, "cv_score": 0.4399798294724268}
+{"trial": 9, "cfg": {"family": "knn", "k": 5, "add_dist": true, "prob_thr": 0.6, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.5124165921756485}
+{"trial": 10, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 450, "add_dist": false, "prob_thr": 0.55, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.5756499329352275}
+{"trial": 11, "cfg": {"family": "gc", "gc_iters": 5, "prob_thr": 0.55, "tta": "none"}, "cv_score": 0.7296281174040659}
+{"trial": 12, "cfg": {"family": "knn", "k": 5, "add_dist": false, "prob_thr": 0.6, "bilateral_params": [5, 0.05, 2.0], "tta": "none"}, "cv_score": 0.6600042183914766}
+{"trial": 13, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 250, "add_dist": true, "prob_thr": 0.55, "bilateral_params": [5, 0.05, 2.0], "tta": "none"}, "cv_score": 0.6156191858092428}
+{"trial": 14, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 450, "add_dist": false, "prob_thr": 0.5, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.5691507674552208}
+{"trial": 15, "cfg": {"family": "gc", "gc_iters": 5, "prob_thr": 0.55, "tta": "hflip"}, "cv_score": 0.7251056790915201}
+{"trial": 16, "cfg": {"family": "knn", "k": 5, "add_dist": false, "prob_thr": 0.6, "bilateral_params": [7, 0.08, 3.0], "tta": "none"}, "cv_score": 0.6606499748267995}
+{"trial": 18, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 450, "add_dist": true, "prob_thr": 0.55, "bilateral_params": null, "tta": "hflip"}, "cv_score": 0.6128781227164409}
+{"trial": 19, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 450, "add_dist": false, "prob_thr": 0.55, "bilateral_params": null, "tta": "hflip"}, "cv_score": 0.577063748143329}
+{"trial": 21, "cfg": {"family": "gc", "gc_iters": 8, "prob_thr": 0.55, "tta": "hflip"}, "cv_score": 0.7273796497592364}
+{"trial": 22, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 350, "add_dist": false, "prob_thr": 0.55, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.5751756242012667}
+{"trial": 23, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 250, "add_dist": true, "prob_thr": 0.5, "bilateral_params": null, "tta": "none"}, "cv_score": 0.5245430333062173}
+{"trial": 25, "cfg": {"family": "knn", "k": 5, "add_dist": false, "prob_thr": 0.55, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.6615676276711178}
+{"trial": 26, "cfg": {"family": "knn", "k": 3, "add_dist": false, "prob_thr": 0.5, "bilateral_params": [7, 0.08, 3.0], "tta": "hflip"}, "cv_score": 0.661012321047314}
+{"trial": 27, "cfg": {"family": "knn", "k": 7, "add_dist": false, "prob_thr": 0.5, "bilateral_params": null, "tta": "hflip"}, "cv_score": 0.6610226833208394}
+{"trial": 28, "cfg": {"family": "knn", "k": 7, "add_dist": true, "prob_thr": 0.6, "bilateral_params": null, "tta": "none"}, "cv_score": 0.5185813404174753}
+{"trial": 29, "cfg": {"family": "knn", "k": 9, "add_dist": true, "prob_thr": 0.6, "bilateral_params": [5, 0.05, 2.0], "tta": "none"}, "cv_score": 0.5215527471683623}
+{"trial": 30, "cfg": {"family": "knn", "k": 5, "add_dist": true, "prob_thr": 0.55, "bilateral_params": [7, 0.08, 3.0], "tta": "none"}, "cv_score": 0.511869830606653}
+{"trial": 32, "cfg": {"family": "knn", "k": 9, "add_dist": true, "prob_thr": 0.5, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.5174882127923206}
+{"trial": 33, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 450, "add_dist": true, "prob_thr": 0.5, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.47868561844146273}
+{"trial": 34, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 150, "add_dist": true, "prob_thr": 0.55, "bilateral_params": null, "tta": "none"}, "cv_score": 0.5839497563323364}
+{"trial": 35, "cfg": {"family": "knn", "k": 3, "add_dist": true, "prob_thr": 0.6, "bilateral_params": [7, 0.08, 3.0], "tta": "none"}, "cv_score": 0.508148999854606}
+{"trial": 36, "cfg": {"family": "knn", "k": 3, "add_dist": true, "prob_thr": 0.5, "bilateral_params": [5, 0.05, 2.0], "tta": "none"}, "cv_score": 0.5082735752417251}
+{"trial": 37, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 450, "add_dist": false, "prob_thr": 0.55, "bilateral_params": [5, 0.05, 2.0], "tta": "none"}, "cv_score": 0.5909427728940934}
+{"trial": 39, "cfg": {"family": "gc", "gc_iters": 3, "prob_thr": 0.55, "tta": "none"}, "cv_score": 0.735351458071271}
+{"trial": 41, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 450, "add_dist": false, "prob_thr": 0.55, "bilateral_params": null, "tta": "none"}, "cv_score": 0.5906822506495757}
+{"trial": 42, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 450, "add_dist": true, "prob_thr": 0.55, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.6159195246558532}
+{"trial": 43, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 350, "add_dist": false, "prob_thr": 0.55, "bilateral_params": null, "tta": "hflip"}, "cv_score": 0.5769394698817103}
+{"trial": 44, "cfg": {"family": "gc", "gc_iters": 8, "prob_thr": 0.55, "tta": "none"}, "cv_score": 0.7247747968088536}
+{"trial": 45, "cfg": {"family": "knn", "k": 9, "add_dist": false, "prob_thr": 0.55, "bilateral_params": [7, 0.08, 3.0], "tta": "hflip"}, "cv_score": 0.6607997375812877}
+{"trial": 46, "cfg": {"family": "knn", "k": 5, "add_dist": false, "prob_thr": 0.5, "bilateral_params": null, "tta": "none"}, "cv_score": 0.6613073189591938}
+{"trial": 49, "cfg": {"family": "knn", "k": 9, "add_dist": false, "prob_thr": 0.5, "bilateral_params": [7, 0.08, 3.0], "tta": "none"}, "cv_score": 0.6610745689246107}
+{"trial": 52, "cfg": {"family": "knn", "k": 7, "add_dist": true, "prob_thr": 0.5, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.51432744446477}
+{"trial": 53, "cfg": {"family": "knn", "k": 5, "add_dist": true, "prob_thr": 0.5, "bilateral_params": null, "tta": "none"}, "cv_score": 0.5117271108005426}
+{"trial": 54, "cfg": {"family": "knn", "k": 5, "add_dist": true, "prob_thr": 0.5, "bilateral_params": [7, 0.08, 3.0], "tta": "hflip"}, "cv_score": 0.5117262143851851}
+{"trial": 55, "cfg": {"family": "knn", "k": 9, "add_dist": true, "prob_thr": 0.6, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.5215527471683623}
+{"trial": 57, "cfg": {"family": "knn", "k": 3, "add_dist": true, "prob_thr": 0.6, "bilateral_params": null, "tta": "hflip"}, "cv_score": 0.50816749347669}
+{"trial": 58, "cfg": {"family": "knn", "k": 5, "add_dist": true, "prob_thr": 0.55, "bilateral_params": [7, 0.08, 3.0], "tta": "hflip"}, "cv_score": 0.511869830606653}
+{"trial": 60, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 150, "add_dist": true, "prob_thr": 0.55, "bilateral_params": null, "tta": "hflip"}, "cv_score": 0.599054012388865}
+{"trial": 62, "cfg": {"family": "knn", "k": 7, "add_dist": true, "prob_thr": 0.6, "bilateral_params": null, "tta": "hflip"}, "cv_score": 0.5185813404174753}
+{"trial": 63, "cfg": {"family": "knn", "k": 3, "add_dist": true, "prob_thr": 0.5, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.5082735752417251}
+{"trial": 64, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 450, "add_dist": false, "prob_thr": 0.5, "bilateral_params": [5, 0.05, 2.0], "tta": "none"}, "cv_score": 0.583483517146245}
+{"trial": 65, "cfg": {"family": "knn", "k": 5, "add_dist": false, "prob_thr": 0.6, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.6607974393264021}
+{"trial": 66, "cfg": {"family": "knn", "k": 3, "add_dist": false, "prob_thr": 0.5, "bilateral_params": null, "tta": "none"}, "cv_score": 0.6608639809305143}
+{"trial": 67, "cfg": {"family": "knn", "k": 3, "add_dist": false, "prob_thr": 0.55, "bilateral_params": [7, 0.08, 3.0], "tta": "none"}, "cv_score": 0.6600442345980972}
+{"trial": 68, "cfg": {"family": "knn", "k": 9, "add_dist": false, "prob_thr": 0.5, "bilateral_params": [5, 0.05, 2.0], "tta": "none"}, "cv_score": 0.6606549841104192}
+{"trial": 70, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 250, "add_dist": false, "prob_thr": 0.5, "bilateral_params": null, "tta": "hflip"}, "cv_score": 0.5660659105008521}
+{"trial": 72, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 350, "add_dist": true, "prob_thr": 0.55, "bilateral_params": null, "tta": "none"}, "cv_score": 0.5619036104245609}
+{"trial": 73, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 150, "add_dist": true, "prob_thr": 0.55, "bilateral_params": [5, 0.05, 2.0], "tta": "none"}, "cv_score": 0.6162107646920822}
+{"trial": 74, "cfg": {"family": "knn", "k": 7, "add_dist": false, "prob_thr": 0.5, "bilateral_params": [7, 0.08, 3.0], "tta": "none"}, "cv_score": 0.6609662467074815}
+{"trial": 75, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 450, "add_dist": true, "prob_thr": 0.5, "bilateral_params": [5, 0.05, 2.0], "tta": "hflip"}, "cv_score": 0.5116392252641839}
+{"trial": 77, "cfg": {"family": "tree", "tree_model": "extratrees", "n_estimators": 250, "add_dist": true, "prob_thr": 0.55, "bilateral_params": null, "tta": "hflip"}, "cv_score": 0.5682382163912227}
+{"trial": 78, "cfg": {"family": "tree", "tree_model": "randomforest", "n_estimators": 250, "add_dist": false, "prob_thr": 0.55, "bilateral_params": [5, 0.05, 2.0], "tta": "none"}, "cv_score": 0.5920438446728014}
+{"trial": 79, "cfg": {"family": "knn", "k": 5, "add_dist": true, "prob_thr": 0.6, "bilateral_params": [7, 0.08, 3.0], "tta": "hflip"}, "cv_score": 0.5127293976182896}
+{"trial": 80, "cfg": {"family": "knn", "k": 5, "add_dist": true, "prob_thr": 0.5, "bilateral_params": [5, 0.05, 2.0], "tta": "none"}, "cv_score": 0.5117200714492776}
