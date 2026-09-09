@@ -5,3 +5,16 @@ __pycache__/
 .env
 venv/
 .venv/
+
+# Course data and generated experiment artifacts
+dataset/
+results/
+results_test2/
+logs/
+figs_unet/
+predictions*/
+*.jsonl
+
+# Model checkpoints (the small reference checkpoint is explicitly retained)
+*.pt
+!tiny_unet.pt

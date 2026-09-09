@@ -2,7 +2,6 @@ import os
 import json
 import numpy as np
 from PIL import Image
-import matplotlib.pyplot as plt
 from typing import Any, Tuple, Optional, List, Dict
 
 # classical ML
@@ -86,6 +85,8 @@ def _overlay_scribbles(img, scr, color_fg=(255,0,0), color_bg=(0,0,255), alpha=0
     return out.astype(np.uint8)
 
 def visualize(image, scribbles, ground_truth, prediction, alpha: float = 0.6):
+    import matplotlib.pyplot as plt
+
     cmap = plt.get_cmap("bwr")
     fig, ax = plt.subplots(1, 3, figsize=(15, 5))
     ax[0].imshow(_overlay_scribbles(image, scribbles, alpha=alpha)); ax[0].set_title("Image + Scribbles")

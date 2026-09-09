@@ -1,70 +1,105 @@
 # Scribble-Supervised Binary Image Segmentation
 
-Binary image segmentation from sparse scribble annotations, comparing classical
-(KNN, Random Forest, GrabCut, Random Walk) and deep learning (Tiny U-Net, trained
-from scratch — no pretrained weights) approaches, combined via ensembling.
+[![CI](https://github.com/KashishMendiratta/Binary_Image_Segmentation/actions/workflows/ci.yml/badge.svg)](https://github.com/KashishMendiratta/Binary_Image_Segmentation/actions/workflows/ci.yml)
 
-Developed as a course project for the Machine Learning Core Lecture, Saarland
+Binary image segmentation from sparse scribble annotations, comparing classical
+methods with a compact U-Net trained from scratch and combining their strengths
+through ensembling.
+
+Developed as a course project for the Machine Learning Core Lecture at Saarland
 University (Summer 2025).
 
-**Best result: 75.8% mIoU** (GrabCut + Tiny U-Net ensemble, 4-way TTA),
-vs. 59.9% mIoU for the pixel-wise KNN baseline (k=3).
+**Best result: 75.8% mIoU** using a GrabCut + Tiny U-Net ensemble with four-way
+test-time augmentation, compared with 59.9% for the pixel-wise KNN baseline.
 
----
+## System overview
 
-## Project Structure
 ```text
-.
-├── challenge.py            # Main pipeline: tuning, training, ensembling, inference
-├── util.py                 # Dataset I/O, model implementations, evaluation, visualization
-├── eval_unet_scribbles.py  # Standalone Tiny U-Net evaluation with TTA + threshold search
-├── tiny_unet.pt  
-└── results/
-└── results_test2/
-└── dataset/
-    ├── train/
-    │   ├── images/
-    │   ├── scribbles/
-    │   ├── ground_truth/
-    │   └── predictions_s1 2_r320 284/    
-    │   └── predictions_s1_r320/
-    │   └── predictions_s1_r384/  
-    │   └── predictions_s2_r320/ 
-    │   └── predictions_s2_r384/ 
-    └── test1/
-    │   ├── images/
-    │   ├── scribbles/
-    │   └── predictions/    # created by challenge.py
-    │   └── predictions_knn_baseline/
-    │   └── predictions_refined/  
-    │   └── predictions_unet_only/ 
-    │   └── report_samples/ 
-    |__ test2/
-    │   ├── images/
-    │   ├── scribbles/
-    │   └── predictions/    # created by challenge.py
-    │   └── predictions_knn_baseline/
-    │   └── predictions_refined/  
-    │   └── predictions_unet_only/ 
-    │   └── report_samples/ 
+sparse foreground/background scribbles
+                  |
+      classical models + Tiny U-Net
+                  |
+       test-time augmentation
+                  |
+       GrabCut/U-Net ensemble
+                  |
+          binary segmentation
 ```
 
----
+## Results
+
+| Method | Train/validation mIoU | CV score | Notes |
+|---|:---:|:---:|---|
+| Baseline KNN (k=3) | 59.9% | - | Pixel-wise, no tuning |
+| Segment-aware KNN (k=9) | 60.2% | 57.3% | SLIC superpixels and Lab/spatial features |
+| Random Forest | - | 62.4% | Used for pseudo-labelling |
+| Random Walk | - | 45.2% | Weakest method under sparse supervision |
+| GrabCut | - | 74.7% | Strongest classical baseline |
+| Tiny U-Net | ~72% | - | Best individual CNN; no pretrained weights |
+| **GrabCut + U-Net** | **75.8%** | - | **Final submission**, four-way TTA |
+
+The complete methodology, ablations, and analysis are available in the
+[project report](report/main.pdf).
+
+## Key design decisions
+
+- **Scribble-only supervision:** Thresholds and confidence settings were chosen
+  using labelled scribble pixels rather than hidden ground-truth masks.
+- **No pretrained weights:** The compact U-Net was trained from scratch to meet
+  the project constraints.
+- **Cross-validated model selection:** A 30-trial, three-fold search compared
+  KNN, Random Forest, GrabCut, and Random Walk configurations.
+- **Evidence-based complexity:** DenseCRF was evaluated but excluded because
+  its marginal improvement did not justify the additional runtime.
+
+## Repository structure
+
+```text
+.
+├── challenge.py            # Training, tuning, ensembling, and inference
+├── util.py                 # Data I/O, models, metrics, and visualisation
+├── eval_unet_scribbles.py  # U-Net evaluation and threshold search
+├── tests/                  # Unit tests for metrics and mask processing
+├── report/main.pdf         # Full methodology and analysis
+├── tiny_unet.pt            # Small reference checkpoint
+└── requirements.txt        # Reproducible Python dependencies
+```
 
 ## Installation
 
 ```bash
-pip install numpy pillow matplotlib scikit-learn scikit-image opencv-python torch tqdm
-# optional, for DenseCRF post-processing ablations:
-pip install pydensecrf
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 ```
 
----
+DenseCRF was used only for an ablation and is not required for the final model.
+Install `pydensecrf` separately to reproduce that experiment.
+
+## Data
+
+The course dataset is not redistributed in this repository. Place an authorized
+copy under `dataset/` using this layout:
+
+```text
+dataset/
+├── train/
+│   ├── images/
+│   ├── scribbles/
+│   └── ground_truth/
+└── test1/
+    ├── images/
+    └── scribbles/
+```
+
+Scribble masks use `0` for labelled background, `1` for labelled foreground,
+and `255` for unlabelled pixels. Generated predictions, logs, and experiment
+artifacts are intentionally excluded from version control.
 
 ## Usage
 
-**Full pipeline** — classical model tuning (cross-validated), Tiny U-Net training,
-ensembling, and inference on train + test splits:
+Run model selection, U-Net training, ensembling, and inference:
 
 ```bash
 python challenge.py \
@@ -74,61 +109,21 @@ python challenge.py \
     --final_tta 4way --ensemble avg_all
 ```
 
-**Skip tuning**, reuse a saved config (`best_config.json`) or the top result
-from a previous tuning log:
+Evaluate the reference U-Net checkpoint:
 
 ```bash
-python challenge.py --trials 0 --use_unet --final_tta 4way --ensemble avg_all
+python eval_unet_scribbles.py \
+    --model tiny_unet.pt \
+    --root dataset/train \
+    --tta hflip
 ```
 
-**Standalone Tiny U-Net evaluation**, with test-time augmentation and
-scribble-based threshold search:
+## Known limitation
 
-```bash
-python eval_unet_scribbles.py --model tiny_unet.pt --root dataset/train --tta hflip
-```
-
-**Post-hoc refinement only** (GrabCut + morphology + optional DenseCRF on
-existing predictions):
-
-```bash
-python challenge.py --refine_only --refine_root dataset/test --refine_pred_dir predictions
-```
-
----
-
-## Method Summary
-
-| Method                          | Train/Val mIoU | CV score | Notes |
-|----------------------------------|:---:|:---:|---|
-| Baseline KNN (k=3)               | 59.9% | – | pixel-wise, no tuning |
-| KNN+ (segment-aware, k=9)        | 60.2% | 57.3% | SLIC superpixels + Lab/spatial features |
-| Random Forest (teacher)          | – | 62.4% | used for pseudo-labeling, not final output |
-| Random Walk                      | – | 45.2% | weakest method, poor robustness to sparse scribbles |
-| GrabCut                          | – | 74.7% | strongest classical baseline |
-| Tiny U-Net (from scratch)        | ~72% | – | best individual CNN; no pretrained weights |
-| **GrabCut + U-Net ensemble**     | **75.8%** | – | **submitted result**, 4-way TTA |
-
-Full methodology, ablations, and analysis in [`report/main.pdf`](report/main.pdf).
-
-### Key design decisions
-- **Scribble-only supervision**: all thresholds (binarization τ, RF confidence)
-  were selected using scribble pixels only, never ground truth — keeping the
-  pipeline honest to the sparse-label setting.
-- **No pretrained weights**: Tiny U-Net (base channels 16, 3 encoder / 2 decoder
-  blocks) was trained from scratch, per project constraints.
-- **Cross-validated config search**: 30-trial, 3-fold CV over classical model
-  families (KNN / Random Forest / GrabCut) before selecting the ensemble.
-- **DenseCRF was evaluated but excluded** from the final submission — gains
-  were marginal (scribble-accuracy 0.9995 → 1.0) relative to added runtime.
-
-### Known limitation
-Tiny U-Net was trained without `pos_weight` class rebalancing (for stability on
-Mac CPU/MPS hardware without GPU acceleration), which may bias predictions
-toward background. The ensemble partially offsets this — see report Limitations
-section for discussion.
-
----
+The Tiny U-Net was trained without positive-class loss weighting due to the
+CPU/MPS environment used for the project. This may bias predictions toward the
+background class; the ensemble partially offsets that limitation.
 
 ## Author
-Kashish Mendiratta 
+
+Kashish Mendiratta
