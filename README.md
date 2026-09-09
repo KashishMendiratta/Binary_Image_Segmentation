@@ -12,6 +12,10 @@ University (Summer 2025).
 **Best result: 75.8% mIoU** using a GrabCut + Tiny U-Net ensemble with four-way
 test-time augmentation, compared with 59.9% for the pixel-wise KNN baseline.
 
+![Input scribbles, submitted ensemble mask, and KNN baseline comparison](docs/assets/qualitative-comparison-000.jpg)
+
+*The submitted ensemble produces cleaner regions and boundaries than the texture-sensitive KNN baseline.*
+
 ## System overview
 
 ```text
